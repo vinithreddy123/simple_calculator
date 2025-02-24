@@ -1,0 +1,101 @@
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Calculator Container */
+#calculator {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 320px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Display Screen */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Container */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Buttons */
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+/* Special Buttons */
+button:nth-child(4n) { /* Operator buttons */
+    background: rgba(255, 255, 255, 0.5);
+}
+
+button:nth-child(4n):hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Clear and Equals Buttons */
+button:last-child {
+    background: #ff4d4d;
+}
+
+button:nth-last-child(2) {
+    background: #4CAF50;
+}
+
+button:last-child:hover {
+    background: #ff3333;
+}
+
+button:nth-last-child(2):hover {
+    background: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    #calculator {
+        width: 280px;
+    }
+    button {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
